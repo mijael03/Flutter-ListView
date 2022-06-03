@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 class DetailScreen extends StatelessWidget {
   final String note;
   const DetailScreen({required this.note});
@@ -23,6 +24,12 @@ class DetailScreen extends StatelessWidget {
             ],
           ),
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: const Text('Home'),
+        onPressed: () {
+          Navigator.of(context).pop(false);
+        },
       ),
     );
   }
